@@ -1,0 +1,346 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+nav{
+    background-color: gray;
+    height: 60px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 2px 5%;
+    background-color: black;
+    z-index: 5;
+    
+    
+}
+#header-logo{
+    color: white;
+    font-size: 50px
+}
+
+.Name{
+    margin-left: 20px;
+}
+.header-links{
+    display: flex;
+    gap: 80px; 
+    padding-left: 50%; 
+}
+a:hover{
+    color: darkgoldenrod;
+}
+a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+#check{
+    display: none;
+}
+.icon{
+    display: none;
+}
+
+.about-hero {
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 55px 7%;
+    background: url("https://images.stockcake.com/public/e/c/7/ec779ce5-2cc2-4491-9338-cacaf1cab617/chef-perfecting-dish-stockcake.jpg");
+    background-position: center 45%;
+    overflow: hidden;
+}
+
+.about-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+     rgba(0, 0, 0, 0.85),
+     rgba(0, 0, 0, 0.25)
+    );
+}
+
+.ourstory{
+    color: darkgoldenrod;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    color: white;
+}
+
+.gold-text {
+    color: #e9b65c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-hero-content h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 5vw, 60px);
+    margin-bottom: 12px;
+}
+
+.gold-line {
+    width: 48px;
+    height: 3px;
+    background: #e9b65c;
+    margin: 15px 0;
+}
+
+.about-stats {
+    display: flex; 
+    gap: 305px;
+    padding: 25px 6%;
+    background: #171717;
+    border-bottom: 1px solid #333;
+}
+
+.stat-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 5px;
+}
+
+.stat-icon {
+    color: #e9b65c;
+    font-size: 25px;
+}
+
+.stat-box h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.stat-box p {
+    font-size: 11px;
+    color: #bdbdbd;
+}
+
+
+.mission-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 55px 7%;
+    background: #f5f0e8;
+    color: #171717;
+}
+
+.mission-content {
+    min-width: 0;
+}
+
+.mission-content h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 3.5vw, 43px);
+    line-height: 1.2;
+}
+
+.mission-content > p:not(.gold-text) {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.learn-btn {
+    display: inline-block;
+    background: #e9b65c;
+    color: #171717;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.learn-btn:hover {
+    background: #d29b3c;
+    transform: translateY(-2px);
+}
+
+
+.mission-image {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.about-footer {
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+    .about-hero {
+        min-height: 350px;
+        padding: 45px 6%;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mission-section {
+        gap: 25px;
+        padding: 45px 5%;
+    }
+
+    .mission-image {
+        height: 260px;
+    }
+
+    nav {
+        padding: 2px 4%;
+    }
+
+    #header-logo {
+        font-size: 35px;
+    }
+
+    .Name {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .icon {
+        display: block;
+        margin-left: auto;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #check {
+        display: none;
+    }
+
+    #cancelicon {
+        display: none;
+    }
+
+    #check:checked ~ .icon #menuicon {
+        display: none;
+    }
+
+    #check:checked ~ .icon #cancelicon {
+        display: inline-block;
+    }
+
+    .header-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        background-color: black;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        z-index: 10;
+    }
+
+    #check:checked ~ .header-links {
+        display: flex;
+    }
+
+    .header-links a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .recipes-hero {
+        height: 250px;
+        padding: 20px;
+    }
+
+    .hero-header-content {
+        font-size: 35px;
+    }
+
+    .hero-para {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+
+    .cards {
+        height: auto;
+        padding: 20px 4%;
+        gap: 20px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        height: auto;
+    }
+
+    .cardimg {
+        height: 180px;
+    }
+}
+
+@media (max-width: 520px) {
+    .about-hero {
+        min-height: 350px;
+        padding: 40px 6%;
+        background-position: center;
+    }
+
+    .about-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .about-stats {
+        padding: 20px 4%;
+        gap: 1px;
+        flex-wrap: wrap;
+    }
+
+    .stat-box {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .stat-box h2 {
+        font-size: 21px;
+    }
+
+    .stat-box p {
+        font-size: 10px;
+    }
+
+    .mission-section {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+    }
+
+    .mission-image {
+        height: 260px;
+    }
+}

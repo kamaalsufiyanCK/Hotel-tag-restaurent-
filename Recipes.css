@@ -1,0 +1,307 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+   
+}
+
+nav{
+    background-color: gray;
+    height: 60px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 2px 5%;
+    background-color: black;
+    z-index: 5;
+    
+    
+}
+#header-logo{
+    color: white;
+    font-size: 50px
+}
+
+.Name{
+    margin-left: 20px;
+}
+.header-links{
+    display: flex;
+    gap: 80px; 
+    padding-left: 50%; 
+}
+a:hover{
+    color: darkgoldenrod;
+}
+a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+#check{
+    display: none;
+}
+.icon{
+    display: none;
+}
+.recipes-hero{
+    background-color: red;
+    height: 300px;
+    width: 100%;
+    background-image: url("./images/Moody\ Indian\ Feast\ Flat\ Lay.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipes-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+     rgba(0, 0, 0, 0.85),
+     rgba(0, 0, 0, 0.25)
+    );
+}
+.hero-content{
+    color: white;
+    z-index: 1;
+}
+h4{
+    padding: 0px 0px 10px;
+    color: orange;
+    text-align: center;
+}
+.hero-header-content{
+    font-size: 50px;
+}
+.hero-para{
+    font-size: 15px;
+    padding: 20px 0px 10px 10px ;
+    text-align: center;  
+}
+.menu-header{
+    text-align: center;
+    color: gray;
+    margin-top: 20px;
+}
+
+.row{
+    width: 100%;
+}
+.cards{
+    height: 500px;
+    padding: 20px 5%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.card{
+    height: 400px;
+    width: 300px;
+    background-color: black;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+}
+.cardimg{
+    height:250px;
+    width: 280px;
+}
+.Cardfood{
+    text-align: center;
+    margin-top: 4px;
+}
+.cardpara{
+    text-align: center;
+    margin-top: 10px;
+}
+button{
+    height: 35px;
+    width: 120px;
+    margin: 10px 90px;
+    border-radius: 10px;
+    border: none;
+    background-color: darkgoldenrod;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(188, 160, 6);
+}
+
+.icons {
+  margin-top: 20px;
+  font-size: 20px;
+}
+#check{
+    display: none;
+}
+.icon{
+        display: none;
+    }
+
+/* Tablet: 1024px and below */
+@media (max-width: 1024px) {
+    .header-links {
+        gap: 25px;
+        padding-left: 0;
+        margin-left: auto;
+    }
+
+    .cards {
+        height: auto;
+        gap: 20px;
+    }
+
+    .card {
+        width: calc(33.333% - 20px);
+    }
+
+    .cardimg {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    button {
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 2px 4%;
+    }
+
+    #header-logo {
+        font-size: 35px;
+    }
+
+    .Name {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .icon {
+        display: block;
+        margin-left: auto;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #check {
+        display: none;
+    }
+
+    #cancelicon {
+        display: none;
+    }
+
+    #check:checked ~ .icon #menuicon {
+        display: none;
+    }
+
+    #check:checked ~ .icon #cancelicon {
+        display: inline-block;
+    }
+
+    .header-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        background-color: black;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        z-index: 10;
+    }
+
+    #check:checked ~ .header-links {
+        display: flex;
+    }
+
+    .header-links a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .recipes-hero {
+        height: 250px;
+        padding: 20px;
+    }
+
+    .hero-header-content {
+        font-size: 35px;
+    }
+
+    .hero-para {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+
+    .cards {
+        height: auto;
+        padding: 20px 4%;
+        gap: 20px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        height: auto;
+    }
+
+    .cardimg {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Name {
+        font-size: 18px;
+    }
+
+    #header-logo {
+        font-size: 30px;
+    }
+
+    .recipes-hero {
+        height: 220px;
+    }
+
+    .hero-header-content {
+        font-size: 28px;
+    }
+
+    .hero-para {
+        font-size: 13px;
+    }
+
+    .cards {
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .cardimg {
+        height: 220px;
+    }
+
+    .Cardfood {
+        font-size: 20px;
+    }
+
+    .cardpara {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Contact.css" />
+    <title>Hotel Taj</title>
+    <link rel="shortcut icon" href="/images/Logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <nav>
+      <i id="header-logo" class="fa-brands fa-yelp"></i>
+      <h3 class="Name">Hotel Tag</h3>
+      <input type="checkbox" id="check" />
+      <label for="check" class="icon">
+        <i id="menuicon" class="fa-solid fa-bars"></i>
+        <i id="cancelicon" class="fa-regular fa-circle-xmark"></i>
+      </label>
+      <ul class="header-links">
+        <a href="./Home.html"><li>Home</li></a>
+        <a href="./About.html"><li>About</li></a>
+        <a href="./Recipes.html"><li>Recipes</li></a>
+        <a href="./Contact.html"><li>Contact</li></a>
+      </ul>
+    </nav>
+    <section class="contact-hero">
+         <div class="contact-overlay"></div>
+            <div class="hero-content">
+                <h4>Get in touch</h4>
+                <h1 class="hero-header-content">Contact Us</h1>
+                <p class="hero-para">We love to hear from you.feel free from reach out of reservation. <br> feedback or any queries</p>
+            </div>
+    </section>
+    
+    <div class="contact-card">
+    <h2 class="card-header">Send Us a Message</h2>
+    <form class="contact-form">
+        <div class="input-group">
+            <span>♙</span>
+            <input type="text" placeholder="Your Name" required>
+        </div>
+
+        <div class="input-group">
+            <span>✉</span>
+            <input type="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="input-group">
+            <span>☎</span>
+            <input type="tel" placeholder="Your Phone">
+        </div>
+
+        <div class="input-group textarea-group">
+            <span>▤</span>
+            <textarea placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">
+            Send Message <span>→</span>
+        </button>
+    </form>
+</body>
+</html>
